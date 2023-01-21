@@ -1,0 +1,40 @@
+on: [push]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Restore build and deps cache
+        uses: actions/cache/restore@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/cac.config.json') }}
+      - name: Build using CaC Action 🏗️
+        uses: kl13nt/courseware-as-code-action@v0.0.14
+        with:
+          debug: true # prints npm and next logs in case of successful build
+      - name: Save build and deps cache
+        uses: actions/cache/save@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/cac.config.json') }}
+      - name: Upload artifact 🚀
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./out
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
