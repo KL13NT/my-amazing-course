@@ -16,6 +16,8 @@ can change the corresponding values in the `cac.config.json` file. Change any of
 the values and commit the changes to have them immediately reflect in the output
 website.
 
+This is a sample explanation.
+
 ## Theme
 
 CaC uses an unconventional approach to styling on the web called Classless CSS.
