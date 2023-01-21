@@ -26,10 +26,6 @@ I decided to go with this approach because it makes changing the theme as easy
 as it could get, assuming course administrators would be the ones interacting
 with the configuration file.
 
-To change the styling or theme used on the website all you have to do is get the
-URL of a classless CSS file on the web and replace the `theme` property in the
-config to that URL.
-
 There's a [GitHub repository] listing several classless CSS frameworks that are
 all compatible with this project.
 
