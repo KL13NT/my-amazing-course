@@ -23,8 +23,7 @@ jobs:
           sudo add-apt-repository ppa:ubuntu-toolchain-r/test
           sudo apt-get update -y
           sudo apt-get install gcc-4.9
-          sudo apt-get install -y build-essential python2 python3 libkrb5-dev gcc openssl libssh2-1-dev g++ make libpcre3-dev libpcre3 libkrb5-dev libk5crypto3 libcomerr2 
-          sudo apt-get install libssl-dev
+          sudo apt-get install -y build-essential 
           npm install nodegit
       - name: Checkout source
         uses: actions/checkout@v3
