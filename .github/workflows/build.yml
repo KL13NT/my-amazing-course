@@ -21,8 +21,8 @@ jobs:
           node-version: 16
       - run: |
           sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-          sudo apt-get update
-          sudo apt-get install -y python2 python3 libkrb5-dev gcc openssl libssh2-1-dev g++ make libpcre libpcreposix libkrb5 libk5crypto libcom_err 
+          sudo apt-get update -y
+          sudo apt-get install -y python2 python3 libkrb5-dev gcc openssl libssh2-1-dev g++ make libpcre3-dev libpcre3 libkrb5-dev libk5crypto3 libcomerr2 
           sudo apt-get install libstdc++-4.9-dev
           sudo apt-get install libssl-dev
           npm install nodegit
