@@ -23,3 +23,5 @@ the description out or empty but make sure the title is sufficient to describe t
 content of the lecture.
 
 > Without a title the listing of lectures will be empty.
+
+![Download lecture presentation from here](https://github.com/KL13NT/my-amazing-course/raw/master/collections/lectures/Lecture%209-%20CFG-PDA-1.pptx)
