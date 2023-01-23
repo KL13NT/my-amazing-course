@@ -1,13 +1,8 @@
 ---
 title: Changing Site Configuration And Theme
 description: How to change website metadata and the theme used
+published: true
 ---
-
-A CaC project consists of three core elements:
-
-- The markdown collections
-- A configuration file `cac.config.json`
-- And a GitHub workflow in the `.github` directory
 
 ## Website Metadata
 
